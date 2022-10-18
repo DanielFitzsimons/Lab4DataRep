@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Content } from './component/content';
 import { Header } from './component/header';
 import { Footer } from './component/footer';
+import { Create } from './component/create';
+import { Read } from './component/read';
 import Navbar from 'react-bootstrap/Navbar'; //imports nav bar 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav'; // imports nav system
@@ -33,8 +35,8 @@ class App extends React.Component{
       <Routes> 
       {/* targets content on different pages through componets, uses path to page and targets content on page and dispalys to App.js  */}
         <Route path='/' element ={<Content></Content>}></Route> 
-        <Route path='/read' element={<Header></Header>}></Route>
-        <Route path='/create' element={<Footer></Footer>}></Route>
+        <Route path='/read' element={<Read></Read>}></Route> {/* New routing for create and read components */}
+        <Route path='/create' element={<Create></Create>}></Route>
         
       </Routes>
         {/* <Header></Header>
